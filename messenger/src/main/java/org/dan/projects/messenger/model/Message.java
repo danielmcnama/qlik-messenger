@@ -72,6 +72,7 @@ public class Message {
 		this.palindrome = palindrome;
 	}
 	
+	//Why is this not working...?
 	private boolean palindromeCheck() {
 		StringBuilder sb = new StringBuilder(this.message);
 		StringBuilder reverse = sb.reverse();
