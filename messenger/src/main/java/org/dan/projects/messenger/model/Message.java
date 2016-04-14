@@ -20,7 +20,7 @@ public class Message {
 		this.message = message;
 		this.author = author;
 		this.recipient= recipient;
-		this.palindrome = palindromeCheck(message);
+		this.palindrome = palindromeCheck();
 		this.created = new Date();
 	}
 	
@@ -72,10 +72,10 @@ public class Message {
 		this.palindrome = palindrome;
 	}
 	
-	//why is this not working?
-	private boolean palindromeCheck(String message) {
-		StringBuilder sb = new StringBuilder(message);
-		String reverse = sb.reverse().toString();
-		return message.equals(reverse);
+	private boolean palindromeCheck() {
+		StringBuilder sb = new StringBuilder(this.message);
+		StringBuilder reverse = sb.reverse();
+		return sb.equals(reverse);
 	}
+	
 }
